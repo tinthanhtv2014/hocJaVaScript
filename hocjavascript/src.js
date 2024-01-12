@@ -13,3 +13,7 @@ console.log("hello world with", test);
 
 console.log(5 + 4 + "a");
 console.log("a " + 5 + 4);
+
+//bài 4
+let newtest = test.slice(0, 5);
+console.log("hello world with", newtest);
