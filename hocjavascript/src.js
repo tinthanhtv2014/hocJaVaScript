@@ -30,3 +30,7 @@ console.log(b === e);
 console.log(b - e);
 console.log(b * e);
 console.log(b / e);
+
+//bài 7
+console.log("hello world with " + (b + c) + "and/nnot " + (2 + b + c));
+console.log(`hoi dan it check string: b = ${b}`);
