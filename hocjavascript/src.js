@@ -71,3 +71,13 @@ let family = [
 ];
 
 console.log(family);
+
+//bài 10
+
+for (let i = 0; i < family.length; i++) {
+  console.log("i = ", family[i]);
+}
+
+for (i in family) {
+  console.log("string: ", family[i]);
+}
