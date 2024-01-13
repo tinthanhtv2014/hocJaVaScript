@@ -34,3 +34,28 @@ console.log(b / e);
 //bài 7
 console.log("hello world with " + (b + c) + "and/nnot " + (2 + b + c));
 console.log(`hoi dan it check string: b = ${b}`);
+
+//bài 8
+let f = {};
+let g = "eirc";
+console.log("type of f: ", typeof f);
+let h = {
+  name: "mannnn",
+  address: "tra vinh",
+  sdt: {
+    sdt1: "00011",
+    sdt2: "00012",
+  },
+  func: function () {
+    console.log("hello guys with object");
+    return;
+  },
+};
+console.log("h: ", h);
+console.log("h name: ", h.func());
+tetsfunc = (tsst) => {
+  console.log("hello guys,", tsst);
+  return;
+};
+
+console.log("func ", tetsfunc(g));
