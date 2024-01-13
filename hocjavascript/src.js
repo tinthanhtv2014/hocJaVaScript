@@ -51,6 +51,7 @@ let h = {
     return;
   },
 };
+h.g = "mannnnnnnnn";
 console.log("h: ", h);
 console.log("h name: ", h.func());
 tetsfunc = (tsst) => {
@@ -59,3 +60,14 @@ tetsfunc = (tsst) => {
 };
 
 console.log("func ", tetsfunc(g));
+
+//bài 9
+let cc = ["a", "f"];
+console.log(cc);
+
+let family = [
+  { name: "linh", age: 25 },
+  { name: "nhung", age: 30 },
+];
+
+console.log(family);
