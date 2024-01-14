@@ -81,3 +81,23 @@ for (let i = 0; i < family.length; i++) {
 for (i in family) {
   console.log("string: ", family[i]);
 }
+
+//bài 11
+let j = 0;
+while (j < family.length) {
+  console.log("j: ", family[j]);
+  j++;
+}
+
+let jj = 0;
+do {
+  console.log("jj:", family[jj]);
+  jj++;
+} while (jj < family.length);
+
+//bài 12
+if (b < c) {
+  console.log(c);
+} else {
+  console.log(b);
+}
