@@ -108,3 +108,10 @@ tong = (a, b) => {
 };
 
 console.log("tong: ", tong(4, 5));
+
+//bài 14
+testFunc = (x, y) => {
+  c = x + y;
+  return c;
+};
+console.log("testFunc: ", testFunc(4, 54));
