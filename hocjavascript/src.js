@@ -101,3 +101,10 @@ if (b < c) {
 } else {
   console.log(b);
 }
+
+//bài 13
+tong = (a, b) => {
+  return a + b;
+};
+
+console.log("tong: ", tong(4, 5));
