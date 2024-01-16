@@ -115,3 +115,13 @@ testFunc = (x, y) => {
   return c;
 };
 console.log("testFunc: ", testFunc(4, 54));
+
+//bài 15
+
+testFuncArrow = (x, y) => {
+  console.log("test arrow function =)))");
+  console.log("test arrow function =)))");
+  return x + y;
+};
+
+console.log(testFuncArrow(3, 4));
