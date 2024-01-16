@@ -125,3 +125,14 @@ testFuncArrow = (x, y) => {
 };
 
 console.log(testFuncArrow(3, 4));
+
+//bài 16
+let obj1 = {
+  name: "thanh",
+  address: "tra vinh",
+  getname: function () {
+    return this.name;
+  },
+};
+
+console.log(obj1.getname());
