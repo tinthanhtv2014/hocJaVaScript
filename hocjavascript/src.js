@@ -136,3 +136,23 @@ let obj1 = {
 };
 
 console.log(obj1.getname());
+
+//bài 17
+
+let sum = (x, y, call) => {
+  let tong = x + y;
+  let i = 0;
+  let timer = setInterval(() => {
+    call(tong);
+    i++;
+    if (i == 5) {
+      clearInterval(timer);
+    }
+  }, 1000);
+};
+
+let print = (message) => {
+  console.log("check:", message);
+};
+
+sum(6, 8, print);
