@@ -155,4 +155,18 @@ let print = (message) => {
   console.log("check:", message);
 };
 
-sum(6, 8, print);
+// sum(6, 8, print);
+
+//bài 18
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr2 = [
+  { name: "test", age: 34 },
+  { name: "test2", age: 44 },
+  { name: "test3", age: 24 },
+  { name: "test4", age: 54 },
+];
+let newarr = arr2.filter((arr) => {
+  return arr.age > 30 && arr;
+});
+
+console.log(newarr);
