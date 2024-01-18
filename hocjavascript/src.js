@@ -170,3 +170,16 @@ let newarr = arr2.filter((arr) => {
 });
 
 console.log(newarr);
+
+//bài 19
+let newarr2 = arr.map((item*2,index) => {
+  return item*2;
+});
+
+let newarr3 = arr.forEach((item) => {
+  a = item * 2;
+  console.log("forech,", a);
+});
+
+// console.log(newarr2);
+console.log("forech,", newarr3);
