@@ -6,5 +6,19 @@
     <title>Document</title>
   </head>
   <body></body>
-  <script src="./src.js"></script>
+  <script>
+    function loadXMLDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          console.log("check res: ", xhttp.responseText);
+        }
+      };
+      xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+      xhttp.send();
+    }
+
+    console.log(loadXMLDoc());
+  </script>
 </html>
+<!-- src="./src.js" -->
