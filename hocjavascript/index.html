@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div id="demo"></div>
+  </body>
   <script>
+    const callback = (error, data) => {
+      console.log("calling callback", error, data);
+    };
+
     function loadXMLDoc() {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
+        if (this.readyState === 4) {
+          let result = xhttp.responseText;
           console.log("check res: ", xhttp.responseText);
+          document.getElementById("demo").innerHTML = result;
+          callback(undefined, "my data");
         }
       };
       xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
       xhttp.send();
     }
 
-    console.log(loadXMLDoc());
+    loadXMLDoc(callback);
   </script>
 </html>
 <!-- src="./src.js" -->
