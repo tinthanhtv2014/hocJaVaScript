@@ -13,21 +13,27 @@
       console.log("calling callback", error, data);
     };
 
-    function loadXMLDoc() {
+    function loadXMLDoc(id, callback) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {
-          let result = xhttp.responseText;
+          let result = JSON.parse(xhttp.responseText);
+          let datastring = JSON.stringify(result);
           console.log("check res: ", xhttp.responseText);
-          document.getElementById("demo").innerHTML = result;
-          callback(undefined, "my data");
+          document.getElementById("demo").innerHTML = result.title;
+
+          callback(undefined, datastring);
         }
       };
-      xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+      xhttp.open(
+        "GET",
+        `https://jsonplaceholder.typicode.com/todos/${id}`,
+        true
+      );
       xhttp.send();
     }
 
-    loadXMLDoc(callback);
+    loadXMLDoc(1, callback);
   </script>
 </html>
 <!-- src="./src.js" -->
