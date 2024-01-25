@@ -13,18 +13,19 @@
       console.log("calling callback", error, data);
     };
 
-    function loadXMLDoc(id, callback) {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState === 4) {
-          let result = JSON.parse(xhttp.responseText);
-          let datastring = JSON.stringify(result);
-          console.log("check res: ", xhttp.responseText);
-          document.getElementById("demo").innerHTML = result.title;
+    function loadXMLDoc(id) {
+      return new Promise((resolve, reject) => {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            let result = JSON.parse(xhttp.responseText);
+            let datastring = JSON.stringify(result);
 
-          callback(undefined, datastring);
-        }
-      };
+            resolve(result);
+          }
+        };
+      });
+
       xhttp.open(
         "GET",
         `https://jsonplaceholder.typicode.com/todos/${id}`,
@@ -33,7 +34,24 @@
       xhttp.send();
     }
 
-    loadXMLDoc(1, callback);
+    // const promiseExp = () => {
+    //   return new Promise((resolve, reject) => {
+    //     resolve({ name: "hoidan it", age: 34 });
+    //     reject("some thing wrong");
+    //   });
+    // };
+
+    // promiseExp()
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    loadXMLDoc(1).then((data) => {
+      console.log(data);
+    });
   </script>
 </html>
 <!-- src="./src.js" -->
