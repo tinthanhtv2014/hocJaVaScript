@@ -69,6 +69,18 @@
     };
 
     console.log(getnew());
+
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = [...arr1, 6, 7, 8];
+    let statee = {
+      name: "thanh",
+    };
+    console.log(arr2);
+    let statee2 = { ...statee, age: 34 };
+
+    let { name, age } = statee2;
+    console.log(statee);
+    console.log(name, age);
   </script>
 </html>
 <!-- src="./src.js" -->
